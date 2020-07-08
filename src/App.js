@@ -1,12 +1,16 @@
 import React from 'react';
-import FillingBlank from './components/FillingBlank';
+import Main from './components/MainComponent';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <FillingBlank number = "1"/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Main />
+      </div>
+    </BrowserRouter>
+
   );
 }
 
