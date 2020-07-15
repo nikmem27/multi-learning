@@ -43,33 +43,28 @@ class Header extends Component {
         <Navbar dark expand="md">
           <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
-            <NavbarBrand className="mr-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+            <NavbarBrand className="ml-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
             <Collapse isOpen={this.state.isNavOpen} navbar>
-              <Nav navbar>
-                <NavItem>
-                  <NavLink className="nav-link" to='/fillingblank'><span className="fa fa-home fa-lg"></span> Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className="nav-link" to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
-                </NavItem>
-              </Nav>
               <Nav className="ml-auto" navbar>
+                <NavItem>
+                  <NavLink className="nav-link" to='/singup'><span className="fa fa-user-plus fa-lg"></span>Singup</NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav-link" to='/login'><span className="fa fa-sign-in fa-lg"></span>Login</NavLink>
+                </NavItem>
+
+              </Nav>
+              {/*<Nav className="ml-auto" navbar>
                 <NavItem>
                   <Button outline onClick={this.toggleModal}>
                     <span className="fa fa-sign-in fa-lg"></span>Login
                   </Button>
                 </NavItem>
-              </Nav>
+              </Nav>*/}
             </Collapse>
           </div>
         </Navbar>
-
+        {/*
         <Jumbotron>
           <div className="container">
             <div className="row row-header">
@@ -79,8 +74,8 @@ class Header extends Component {
               </div>
             </div>
           </div>
-        </Jumbotron>
-
+        </Jumbotron>*/}
+        {/*
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
           <ModalBody>
@@ -106,6 +101,7 @@ class Header extends Component {
             </Form>
           </ModalBody>
         </Modal>
+        */}
       </div>
     );
   }

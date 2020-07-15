@@ -25,7 +25,7 @@ function Question(props) {
             <ul>
                 {elements.map((value, index) => {
                     return <p key={index}>{number} * {value} =
-                    <Input placeholder=" Your answer" />
+                    <Input type="number" placeholder=" Your answer" />
                     </p>
                 })}
             </ul>
