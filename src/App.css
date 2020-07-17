@@ -1,9 +1,15 @@
 .sidebar {
   min-width: 250px;
   max-width: 250px;
-  background-color: brown;
-  margin-left: 0px;
-  transition:  0.5s;
+  background: #7386d5;
+  color: #fff;
+  margin-left: -250px;
+  transition: all 0.5s;
+}
+
+.sidebar.is-open {
+  margin-left: 0;
+  transition: 0.5s;
 }
 
 .row-header{

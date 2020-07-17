@@ -5,38 +5,11 @@ import { NavLink } from 'react-router-dom';
 class Header extends Component {
     constructor(props) {
         super(props);
-
-        this.toggleNav = this.toggleNav.bind(this);
-        this.state = {
-            isNavOpen: false,
-            idModalOpen: false
-        };
-        this.toggleModal = this.toggleModal.bind(this);
-        this.handleLogin = this.handleLogin.bind(this);
-    }
-
-    toggleNav() {
-        this.setState({
-            isNavOpen: !this.state.isNavOpen
-        });
-    }
-
-    toggleModal() {
-        this.setState({
-            isModalOpen: !this.state.isModalOpen
-        });
-    }
-
-    handleLogin(event) {
-        this.toggleModal();
-        alert("Username: " + this.username.value + "Password: " + this.password.value
-            + " Remember: " + this.remember.checked);
-        event.preventDefault();
     }
 
     render() {
         return (
-            <div className="sidebar">
+            <div className={"sidebar "+ (this.props.isOpen ? "is-open" : "")}>
                 <NavbarToggler>
                     <Nav vertical>
                         <NavItem>

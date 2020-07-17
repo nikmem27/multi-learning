@@ -3,18 +3,19 @@ import {
   Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
   Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label
 } from 'reactstrap';
+import Sidebar from './Sidebar'
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
   constructor(props) {
     super(props);
 
-    this.toggleNav = this.toggleNav.bind(this);
     this.state = {
       isNavOpen: false,
-      idModalOpen: false
+      isSidebarOpen: false
     };
-    this.toggleModal = this.toggleModal.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
+    this.toggleSidebar = this.toggleSidebar.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
   }
 
@@ -24,9 +25,9 @@ class Header extends Component {
     });
   }
 
-  toggleModal() {
+  toggleSidebar() {
     this.setState({
-      isModalOpen: !this.state.isModalOpen
+      isSidebarOpen: !this.state.isSidebarOpen
     });
   }
 
@@ -41,6 +42,7 @@ class Header extends Component {
     return (
       <div>
         <Navbar dark expand="md">
+          <Button className="fa fa-bars fa-lg" onClick={this.toggleSidebar}/>
           <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
             <NavbarBrand className="ml-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
@@ -63,6 +65,7 @@ class Header extends Component {
             </Collapse>
           </div>
         </Navbar>
+        <Sidebar isOpen={this.state.isSidebarOpen} />
         {/*
         <Jumbotron>
           <div className="container">

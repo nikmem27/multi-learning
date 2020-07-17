@@ -14,12 +14,13 @@ class Main extends Component {
     return (
       <div>
         <Header />
+        <Sidebar isOpen={this.state.isSidebarOpen} />
         <TransitionGroup>
           <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
             <Switch>
               <Route exact path="/fillingblank" component={() => <FillingBlank number="1" />} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/sidebar" component={Sidebar} />
+              {/*<Route exact path="/sidebar" component={Sidebar} />*/}
               <Redirect to="/fillingblank" />
             </Switch>
           </CSSTransition>
