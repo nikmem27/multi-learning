@@ -1,3 +1,12 @@
+.App {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+/*--------------------------------
+  SIDEBAR STYLE 
+  ---------------------------------*/
 .sidebar {
   min-width: 250px;
   max-width: 250px;
@@ -5,11 +14,27 @@
   color: #fff;
   margin-left: -250px;
   transition: all 0.5s;
+  position: relative;
 }
 
 .sidebar.is-open {
   margin-left: 0;
   transition: 0.5s;
+}
+
+.side-menu {
+  height: calc(100vh - 130px);
+  overflow-y: scroll;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+.content {
+  padding: 20px;
+  margin-left: 0;
+  height: 100vh;
 }
 
 .row-header{
@@ -68,10 +93,6 @@ address{
   transition: all 300ms ease-out;
 }
 
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -105,4 +126,22 @@ address{
   to {
     transform: rotate(360deg);
   }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    overflow: hidden;
+  }
+
+  .content.is-open {
+    margin-left: 100%;
+  }
+
+  .sidebar.is-open {
+    min-width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    transition: all 0.5s, height 0s;
+  }
+
 }

@@ -1,9 +1,11 @@
 import React from 'react';
-import Main from './components/MainComponent';
 import { BrowserRouter } from 'react-router-dom';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Main from './components/MainComponent';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div>
