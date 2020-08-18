@@ -13,7 +13,7 @@ class Main extends Component {
     super(props);
 
     this.state = {
-      sidebarIsOpen: false
+      sidebarIsOpen: true
     }
     this.toggleSideBar = this.toggleSideBar.bind(this);
   }

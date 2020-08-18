@@ -10,11 +10,15 @@
 .sidebar {
   min-width: 250px;
   max-width: 250px;
-  background: #7386d5;
-  color: #fff;
+  background: #f0f0f0;
+  color : #373A3C;
   margin-left: -250px;
   transition: all 0.5s;
   position: relative;
+}
+
+a {
+  color : #373A3C;
 }
 
 .sidebar.is-open {
@@ -24,9 +28,29 @@
 
 .side-menu {
   height: calc(100vh - 130px);
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
+  /*color: #373A3C;*/
 }
 
+.nav-item:hover {
+  color: #7386d5;
+  background: #fff;
+}
+
+.menu-open {
+  background: #6d7fcc;
+}
+
+li a.dropdown-toggle::after {
+  display: inline-flex;
+  position: relative;
+  left: 60%;
+  top: 10%;
+}
+
+.items-menu {
+  margin-left: 10%;
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE
