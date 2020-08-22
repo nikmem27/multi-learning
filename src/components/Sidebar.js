@@ -15,7 +15,16 @@ class Header extends Component {
                         <NavItem>
                             <NavLink className="nav-link"><span className="fa fa-sign-in fa-lg"></span>Login</NavLink>
                         </NavItem>
-                        <Section/>
+                        <Section number={1}/>
+                        <Section number={2}/>
+                        <Section number={3}/>
+                        <Section number={4}/>
+                        <Section number={5}/>
+                        <Section number={6}/>
+                        <Section number={7}/>
+                        <Section number={8}/>
+                        <Section number={9}/>
+                        <Section number={10}/>
                     </Nav>
                 </div>
             </div>

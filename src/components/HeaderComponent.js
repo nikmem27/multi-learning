@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,
+  Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, NavLink, Jumbotron,
   Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   constructor(props) {
@@ -40,10 +40,10 @@ class Header extends Component {
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink className="nav-link" to='/singup'><span className="fa fa-user-plus fa-lg"></span>Singup</NavLink>
+                  <NavLink className="nav-link" tag={Link} to='/singup'><span className="fa fa-user-plus fa-md"></span> Singup</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink className="nav-link" to='/login'><span className="fa fa-sign-in fa-lg"></span>Login</NavLink>
+                  <NavLink className="nav-link" tag={Link} to='/login'><span className="fa fa-sign-in fa-md"></span> Login</NavLink>
                 </NavItem>
               </Nav>
               {/*<Nav className="ml-auto" navbar>

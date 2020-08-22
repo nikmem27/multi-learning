@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse, NavLink, NavItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 const Section = (props) => {
@@ -9,7 +10,7 @@ const Section = (props) => {
     return (
         <div>
             <NavItem onClick={toggle}>
-                <NavLink className="dropdown-toggle"><span></span>Section 3</NavLink>
+                <NavLink className="dropdown-toggle"><span></span>Section {props.number}</NavLink>
             </NavItem>
             <Collapse
                 isOpen={collapsed}
@@ -17,11 +18,11 @@ const Section = (props) => {
                 className="items-menu"
             >
                 <NavItem>
-                    <NavLink className="nav-link"><span className="fa fa-book fa-md"> Lesson</span></NavLink>
+                    <NavLink className="nav-link" tag={Link}><span className="fa fa-book fa-md"> Lesson</span></NavLink>
                 </NavItem>
                 <NavItem>
-                <NavLink className="nav-link"><span></span>Test</NavLink>
-            </NavItem>
+                    <NavLink className="nav-link" tag={Link}><span className="fa fa-calculator fa-md"> Test</span></NavLink>
+                </NavItem>
             </Collapse>
         </div>
     );
