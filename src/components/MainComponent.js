@@ -34,9 +34,9 @@ class Main extends Component {
             <TransitionGroup>
               <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
                 <Switch>
-                  <Route exact path="/fillingblank" component={() => <FillingBlank number="1" />} />
+                  <Route exact path="/fillingblank/:number" component={FillingBlank} />
                   <Route exact path="/login" component={Login} />
-                  <Redirect to="/fillingblank" />
+                  {/*<Redirect to="/fillingblank" />*/}
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

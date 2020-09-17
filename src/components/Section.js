@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Collapse, NavLink, NavItem } from 'reactstrap';
-import { Link } from 'react-router-dom';
-
+import { Link, withRouter } from 'react-router-dom';
 
 const Section = (props) => {
     const [collapsed, setCollapsed] = useState(false);
@@ -21,7 +20,7 @@ const Section = (props) => {
                     <NavLink className="nav-link" tag={Link}><span className="fa fa-book fa-md"> Lesson</span></NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className="nav-link" tag={Link}><span className="fa fa-calculator fa-md"> Test</span></NavLink>
+                    <NavLink className="nav-link" tag={Link} to={`/fillingblank/${props.number}`} ><span className="fa fa-calculator fa-md"> Test</span></NavLink>
                 </NavItem>
             </Collapse>
         </div>

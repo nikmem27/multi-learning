@@ -36,7 +36,7 @@ class Header extends Component {
           <Button className="fa fa-bars fa-lg" onClick={this.props.toggleSideBar}/>
           <div className="container">
             <NavbarToggler onClick={this.toggleNav} />
-            <NavbarBrand className="ml-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+            <NavbarBrand className="ml-auto" href="/"><img src='/assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>

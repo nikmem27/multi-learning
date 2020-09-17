@@ -3,7 +3,8 @@ import { Nav, NavLink, NavItem } from 'reactstrap';
 
 import Section from './Section'
 
-class Header extends Component {
+class Sidebar extends Component {
+    
     render() {
         return (
             <div className={"sidebar " + (this.props.isOpen ? "is-open" : "")}>
@@ -32,4 +33,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Sidebar;
