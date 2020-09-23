@@ -4,6 +4,7 @@ import Login from './LoginComponent';
 import Header from './HeaderComponent';
 import Sidebar from './Sidebar';
 import Lesson from './Lesson';
+import SignUp from './SignUpComponent';
 
 import { Container } from 'reactstrap';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -38,6 +39,7 @@ class Main extends Component {
                   <Route exact path="/fillingblank/:number" component={FillingBlank} />
                   <Route exact path="/lesson/:number" component={Lesson} />
                   <Route exact path="/login" component={Login} />
+                  <Route exact path="/signup" component={SignUp} />
                   {/*<Redirect to="/fillingblank" />*/}
                 </Switch>
               </CSSTransition>
