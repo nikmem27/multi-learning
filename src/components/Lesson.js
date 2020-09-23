@@ -7,12 +7,17 @@ class Lesson extends Component {
     }
 
     render() {
+        let myAr = [1,2,3,4,5,6,7,8,9,10]
         return (
             <div>
                 <table>
-                    <tr>
-                        { for(let i = 0; i < 10; i++) }
-                    </tr>
+                    <td>
+                        {
+                            [myAr.map((val, index) => {
+                            return <tr>{this.props.match.params.number} * {val} =  {this.props.match.params.number*val}</tr>
+                            })]
+                        }
+                    </td>
                 </table>
             </div>
         );
