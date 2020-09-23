@@ -3,6 +3,7 @@ import FillingBlank from './FillingBlank';
 import Login from './LoginComponent';
 import Header from './HeaderComponent';
 import Sidebar from './Sidebar';
+import Lesson from './Lesson';
 
 import { Container } from 'reactstrap';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
@@ -35,6 +36,7 @@ class Main extends Component {
               <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
                 <Switch>
                   <Route exact path="/fillingblank/:number" component={FillingBlank} />
+                  <Route exact path="/lesson/:number" component={Lesson} />
                   <Route exact path="/login" component={Login} />
                   {/*<Redirect to="/fillingblank" />*/}
                 </Switch>

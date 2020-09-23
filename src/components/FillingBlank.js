@@ -1,5 +1,4 @@
-import React, { Component, useEffect } from 'react';
-import { useParams, withRouter } from 'react-router-dom';
+import React, { Component} from 'react';
 import { Input, Button } from 'reactstrap';
 
 for (var elements = [], i = 0; i < 10; ++i) elements[i] = i;    //creates an array with numbers 0 to 9 order by ascedning
@@ -25,14 +24,21 @@ class Question extends Component {
     }
 
     handleSubmit(event) {
+        let counter = 0;
+        let numbers = [];
         for (let key in this.state) {
             let value = this.state[key]
             if (key != value) {
                 console.log(key, value);
-                console.log(`You have problem with number ${key / this.props.match.params.number}`);
+                numbers.push(key/this.props.match.params.number);
             }
-
+            else
+            {
+                counter++;
+            }
         }
+        alert(`Your grade is ${counter}/10\nYou have to revise in this numbers: ${numbers}`);
+        
     }
 
     handleChange = (e) => {

@@ -17,7 +17,7 @@ const Section = (props) => {
                 className="items-menu"
             >
                 <NavItem>
-                    <NavLink className="nav-link" tag={Link}><span className="fa fa-book fa-md"> Lesson</span></NavLink>
+                    <NavLink className="nav-link" tag={Link} to={`/lesson/${props.number}`}><span className="fa fa-book fa-md"> Lesson</span></NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink className="nav-link" tag={Link} to={`/fillingblank/${props.number}`} ><span className="fa fa-calculator fa-md"> Test</span></NavLink>
