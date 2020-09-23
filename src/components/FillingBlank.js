@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import { Input, Button } from 'reactstrap';
 
-for (var elements = [], i = 0; i < 10; ++i) elements[i] = i;    //creates an array with numbers 0 to 9 order by ascedning
+for (var elements = [], i = 0; i < 10; ++i) elements[i] = i + 1;    //creates an array with numbers 1 to 10 order by ascedning
 
 function randomOrder(array) {
     let tmp, current, top = array.length;
