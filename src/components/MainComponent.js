@@ -40,7 +40,7 @@ class Main extends Component {
                   <Route exact path="/lesson/:number" component={Lesson} />
                   <Route exact path="/login" component={Login} />
                   <Route exact path="/signup" component={SignUp} />
-                  {/*<Redirect to="/fillingblank" />*/}
+                  <Redirect to="/login"/>
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

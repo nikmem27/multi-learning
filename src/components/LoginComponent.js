@@ -20,14 +20,14 @@ class Login extends Component {
     render() {
         return (
             <div className="col-sm-4 offset-4">
-                <Form onSubmit={this.handleLogin} style={{ borderStyle: "ridge", marginTop: "50%" }}>
+                <Form onSubmit={this.handleLogin} style={{ padding:50, borderStyle: "ridge", marginTop: "50%" }}>
                     <FormGroup>
-                        <Label htmlFor="username">Username</Label>
+                        <Label htmlFor="username"><span className="fa fa-user fa-lg"> Username</span></Label>
                         <Input type="text" id="username" name="username"
                             innerRef={(input) => this.username = input} />
                     </FormGroup>
                     <FormGroup>
-                        <Label htmlFor="password">Password</Label>
+                        <Label htmlFor="password"><span className="fa fa-key fa-lg"> Password</span></Label>
                         <Input type="password" id="password" name="password"
                             innerRef={(input) => this.password = input} />
                     </FormGroup>
