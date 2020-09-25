@@ -18,7 +18,7 @@ class Question extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            grade: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
